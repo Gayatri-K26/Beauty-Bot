@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(120deg, #f8f7f5 0%, #f3efea 100%);
+  color: #222;
+}
+
+.app-container {
+  max-width: 700px;
+  margin: 48px auto 32px auto;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 6px 36px rgba(180,160,120,0.07);
+  padding: 44px 32px 32px 32px;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 12px 0;
+  color: #222;
+}
+
+.subtitle {
+  font-size: 1.17rem;
+  color: #a6a6a6;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.hero {
+  background: linear-gradient(90deg, #f3efea 70%, #f8f7f5 100%);
+  border-radius: 18px;
+  padding: 28px 18px 18px 18px;
+  margin-bottom: 28px;
+  text-align: center;
+  box-shadow: 0 2px 14px rgba(180,160,120,0.06);
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8c5e3c;
+  margin-bottom: 8px;
+}
+.hero-desc {
+  font-size: 1.09rem;
+  color: #8c5e3c;
+  font-weight: 400;
+}
+
+main {
+  min-height: 320px;
+}
+
+.loader {
+  text-align: center;
+  color: #b7a6a1;
+  font-size: 1.2rem;
+  margin: 40px 0;
+}
+
+.error {
+  color: #e57373;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.footer {
+  text-align: center;
+  color: #b7a6a1;
+  margin-top: 48px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* CategorySelector styles */
+.category-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.category-pill {
+  background: #f3efea;
+  color: #222;
+  border: none;
+  border-radius: 22px;
+  padding: 12px 28px;
+  font-size: 1.07rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px rgba(180,160,120,0.06);
+}
+.category-pill.selected,
+.category-pill:hover {
+  background: #e2d3c6;
+  color: #8c5e3c;
+  box-shadow: 0 3px 12px rgba(180,160,120,0.12);
+}
+
+/* ProductList styles */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  margin-bottom: 32px;
+}
+.product-card {
+  background: #fcfaf8;
+  border-radius: 18px;
+  box-shadow: 0 2px 14px rgba(180,160,120,0.07);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, transform 0.18s;
+}
+.product-card:hover {
+  box-shadow: 0 8px 26px rgba(180,160,120,0.14);
+  transform: translateY(-2px) scale(1.025);
+}
+.product-title {
+  font-size: 1.13rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+.product-brand {
+  font-size: 1.01rem;
+  color: #a6a6a6;
+  margin-bottom: 12px;
+}
+.product-meta {
+  font-size: 0.97rem;
+  color: #8c5e3c;
+  margin-bottom: 7px;
+}
+.product-description {
+  font-size: 0.99rem;
+  color: #444;
+  margin-bottom: 0;
+}
+
+/* Recommendation styles */
+.recommendation-box {
+  background: #f3efea;
+  border-radius: 18px;
+  padding: 22px 20px;
+  margin-bottom: 20px;
+  color: #6c4d36;
+  font-size: 1.15rem;
+  font-style: italic;
+  box-shadow: 0 1px 8px rgba(180,160,120,0.06);
+}
+
+@media (max-width: 700px) {
+  .app-container {
+    padding: 12px 2vw 20px 2vw;
+  }
+  .header h1 {
+    font-size: 2.1rem;
+  }
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 18px 7vw 14px 7vw;
+  }
+}
